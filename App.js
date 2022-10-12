@@ -10,7 +10,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import Router from './src/app/navigation/Router';
 import { Provider, useSelector } from 'react-redux';
-import store from './src/app/redux/Store';
+import InputDataReducer from './src/modules/InputData/reducer/InputDataReducer';
 
 const MainApp = () =>{
   
@@ -29,7 +29,7 @@ const MainApp = () =>{
 const App = () =>{
   
   return(
-    <Provider store={store}>
+    <Provider InputDataReducer={InputDataReducer}>
       <MainApp/>
     </Provider>
     ); 

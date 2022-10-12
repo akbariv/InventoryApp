@@ -6,25 +6,19 @@ import { ScrollView } from 'react-native-gesture-handler'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigation } from '@react-navigation/native'
 
-export default function InputDataComponents() {
+export default function InputDataComponents(props) {
   
-  const [id,setId]=useState('');
-  const [name,setName]=useState('');
-  const [price,setPrice]=useState('');
-  const [qty,setQty]=useState('');
-
   const dispatch = useDispatch();
   const navigation = useNavigation();
   
-  // const setData = this.props;
   const stateGlobal = useSelector(state=>state);
-  const setData = () =>{
-      dispatch({type: 'SET_DATA',
-      id:id,name:name,
-      price:price,qty:qty
-    })
-    navigation.navigate('Home');
-    }  
+//   const setData = () =>{
+//       dispatch({type: 'SET_DATA',
+//       id:props.id,name:props.name,
+//       price:props.price,qty:props.qty
+//     })
+//     navigation.navigate('Home');
+//     }  
 
     return (
       <View style={styles.container}>
@@ -33,18 +27,18 @@ export default function InputDataComponents() {
         <Text color={'#A5A5A5'}>Input Produk Baru</Text>
         <View height={30}/>
         <Input placeholder="Masukan ID Produk" label="ID" 
-        value={id} onChangeText={(value=>setId(value))} 
+        value={props.id} onChangeText={(value=>props.handleSetId(value))} 
         />
         <Input placeholder="Masukan Nama Produk" label="Nama Produk" 
-        value={name} onChangeText={(value=>setName(value))} 
+        value={props.name} onChangeText={(value=>props.handleSetName(value))} 
         />
         <Input placeholder="Masukan Harga Produk" label="Harga" 
-         value={price} onChangeText={(value=>setPrice(value))} 
+         value={props.price} onChangeText={(value=>props.handleSetPrice(value))} 
         />
         <Input placeholder="Masukan jumlah quantity produk" label="Qty" 
-        value={qty} onChangeText={(value=>setQty(value))} 
+        value={props.qty} onChangeText={(value=>props.handleSetQty(value))} 
         />
-        <Button title="Konfirmasi" onPress={setData}/>
+        <Button title="Konfirmasi" onPress={props.handleSetData}/>
        </ScrollView> 
     </View>
     )
