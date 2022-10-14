@@ -9,7 +9,6 @@ const defaultData={
 
 const InputDataReducer = (state = defaultData , action)=>{
     if(action.type === 'SET_DATA'){
-
         return{
             ...state,
             ...action.payload

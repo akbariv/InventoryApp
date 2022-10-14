@@ -2,7 +2,6 @@ import { StyleSheet, Text, View } from 'react-native'
 import React, { useState } from 'react'
 import InputDataComponents from './InputDataComponents'
 import { useDispatch } from 'react-redux';
-import InputDataReducer from './reducer/InputDataReducer';
 import { useNavigation } from '@react-navigation/native';
 import { SetData } from './action/InputDataAction';
 
@@ -32,13 +31,15 @@ export default function InputDataContainer () {
  }
 
  function handleSetData (){
-//   InputDataReducer({type: 'SET_DATA',
-//   id:id,name:name,
-//   price:price,qty:qty
-// })
-dispatch(SetData({id:id, name: name, qty: qty, price: price}))
-navigation.navigate('Home');
-}  
+   dispatch(SetData({id:id, name: name,
+    qty: qty, price: price}))
+    navigation.navigate('Home');
+    
+  }  
+  //   InputDataReducer({type: 'SET_DATA',
+  //   id:id,name:name,
+  //   price:price,qty:qty
+  // })
 
 
   

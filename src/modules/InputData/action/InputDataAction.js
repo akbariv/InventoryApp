@@ -1,6 +1,6 @@
 export const SET_DATA = 'SET_DATA';
 
-export const SetData = (dataBeneran) => ({
+export const SetData = (SetData) => ({
     type:SET_DATA,
-    payload:dataBeneran
+    payload:SetData
 });
