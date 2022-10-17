@@ -35,7 +35,7 @@ export default function LoginComponents() {
         <Text>Lupa password? Klik Disini</Text>
       </View>
 
-    <Button title="Masuk" onPress={()=>navigation.navigate('Home')}/>
+    <Button title="Masuk" onPress={()=>navigation.navigate('Input')}/>
   </View>
   )
 }

@@ -1,4 +1,4 @@
-import { SetData } from "../action/InputDataAction";
+import { SET_DATA } from "../action/InputDataAction";
 
 const defaultData={
     id:null,
@@ -8,15 +8,13 @@ const defaultData={
 }
 
 const InputDataReducer = (state = defaultData , action)=>{
-    if(action.type === 'SET_DATA'){
-        return{
-            ...state,
-            ...action.payload
-            // id:action.id,
-            // name:action.name,
-            // price:action.price,
-            // qty:action.qty,
-        }
+    switch(action.type){
+        case SET_DATA:
+            
+            return{
+                ...state,
+                ...action.payload
+            }
     }
 }
 

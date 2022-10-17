@@ -2,7 +2,6 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import Router from './src/app/navigation/Router';
 import { Provider, useSelector } from 'react-redux';
-import InputDataReducer from './src/modules/InputData/reducer/InputDataReducer';
 import store from './src/app/redux/Store';
 
 const MainApp = () =>{

@@ -7,17 +7,19 @@ import IconController from '../../components/elements/IconController/IconControl
 import { useNavigation } from '@react-navigation/native'
 import { useSelector } from 'react-redux'
 
+
 export default function HomeComponents() {
 
-  const stateGlobal = useSelector(state=>state);
+  const stateGlobal = useSelector((state)=>state);
+ 
 
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      
+    
       <Header/>
       <ScrollView showsVerticalScrollIndicator={false}>
-      <Card quantity={stateGlobal.qty} name={stateGlobal.name} harga={"Rp." + stateGlobal.price}/>
+      <Card quantity={stateGlobal.qty} name={stateGlobal.name} harga={"Rp." +stateGlobal.price}/>
       <Card quantity='16' name='Pulpen' harga='Rp. 8.500.000'/>
       <Card quantity='16' name='Pensil' harga='Rp. 8.500.000'/>
       <Card quantity='16' name='Buku' harga='Rp. 8.500.000'/>

@@ -11,7 +11,7 @@ export default function InputDataComponents(props) {
   const dispatch = useDispatch();
   const navigation = useNavigation();
   
-  const stateGlobal = useSelector(state=>state);
+  
 //   const setData = () =>{
 //       dispatch({type: 'SET_DATA',
 //       id:props.id,name:props.name,
